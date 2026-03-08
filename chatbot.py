@@ -63,7 +63,7 @@ def generate_response(user_input="hello, how are you doing?"):
     # Generate a response using the model
     # num_return_sequences in model.generate(...) controls how many different generated outputs the model should 
     # return for each input.
-    outputs = model.generate(**inputs, max_length=200, num_return_sequences=1)
+    outputs = model.generate(**inputs, max_length=150, num_return_sequences=1)
     # print("outputs" + "*" * 20)  # Print a separator for better readability in the debug output
     # print(outputs)
 
@@ -80,6 +80,7 @@ def generate_response(user_input="hello, how are you doing?"):
 
 # Example usage
 if __name__ == "__main__":
-    user_input = "Hello, how are you doing?"
-    response = generate_response(user_input)
-    print("Chatbot response:", response)
+    while True:  # Start an infinite loop to continuously prompt the user for input
+        user_input = input("You: ")  # Prompt the user for input
+        response = generate_response(user_input)
+        print("Chatbot response:", response)
