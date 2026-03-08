@@ -58,7 +58,7 @@ def generate_response(user_input="hello, how are you doing?"):
     # print(inputs)  # Print the tokenized input for debugging purposes
 
     # This line is likely for debugging or exploration purposes, showing the mapping of pre-trained vocabulary files.
-    tokenizer.pretrained_vocab_files_map
+    # tokenizer.pretrained_vocab_files_map
 
     # Generate a response using the model
     # num_return_sequences in model.generate(...) controls how many different generated outputs the model should 
